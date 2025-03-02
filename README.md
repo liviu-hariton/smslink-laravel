@@ -27,9 +27,13 @@ Integration with SMSLink offers the ability to perform the following actions:
 * [SMSLink official API documentation](#smslink-official-api-documentation)
 * [Disclaimer](#disclaimer)
 
+## Requirements
+* PHP >= 8.3
+* [Laravel](https://github.com/laravel/laravel) >= 11.0
+
 ## Installation
 
-You can install the SMSLink Larvel package via Composer. Run the following command in your terminal:
+You can install the SMSLink Laravel package via Composer. Run the following command in your terminal:
 
 ```bash
 composer require liviu-hariton/smslink-laravel
@@ -226,10 +230,6 @@ Update your `.env` file and remove the following lines:
 SMSLINK_CONNECTION_ID=
 SMSLINK_CONNECTION_PASSWORD=
 ```
-
-## Requirements
-* PHP >= 8.3
-* [Laravel](https://github.com/laravel/laravel) >= 11.0
 
 ## License
 This library is licensed under the MIT License. See the [LICENSE.md](LICENSE.md) file for details.
