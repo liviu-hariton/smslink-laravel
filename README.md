@@ -18,10 +18,11 @@ Integration with SMSLink offers the ability to perform the following actions:
 * [Requirements](#requirements)
 * [Installation](#installation)
 * [Usage](#usage)
-    * [Send a single SMS message](#send-a-single-sms-message)
-    * [Send messages in bulk](#send-messages-in-bulk)
-    * [Check the current balance](#check-the-current-balance)
-    * [Get the delivery report](#get-the-delivery-report)
+  * [Alter the default credentials after initialization](#alter-the-default-credentials-after-initialization)
+  * [Send a single SMS message](#send-a-single-sms-message)
+  * [Send messages in bulk](#send-messages-in-bulk)
+  * [Check the current balance](#check-the-current-balance)
+  * [Get the delivery report](#get-the-delivery-report)
 * [Uninstallation](#uninstallation)
 * [License](#license)
 * [SMSLink official API documentation](#smslink-official-api-documentation)
@@ -64,6 +65,31 @@ You can get the `Connection ID` and `Connection Password` values from your [SMSL
 ## Usage
 
 When the installation is done you can easily start consuming the SMSLink's API by using the available methods. All methods will return a JSON formatted data. Just inject the dependency in your controller's methods.
+
+### Alter the default credentials after initialization
+
+In case you want to use different credentials for a specific request or you have them stored in a database, you can set them using the `setConfig()` method.
+
+```php
+<?php
+
+namespace App\Http\Controllers;
+
+use LHDev\Smslink\Smslink;
+
+class YourController extends Controller
+{
+    public function yourMethod(Smslink $smslink)
+    {
+        $smslink->setConfig([
+            'connection_id' => 'your_connection_id',
+            'connection_password' => 'your_connection_password',
+        ]);
+        
+        $sms = $smslink->send('0712345678', 'This is a SMS message', $options);
+    }
+}
+```
 
 ### Send a single SMS message
 

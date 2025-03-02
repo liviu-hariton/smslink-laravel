@@ -27,6 +27,14 @@ class Smslink
     }
 
     /**
+     * @throws InvalidConfigException
+     */
+    public function setConfig($config_data): void
+    {
+        $this->saveConfig($config_data);
+    }
+
+    /**
      * Save the configuration data
      *
      * @param $config_data
