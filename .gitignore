@@ -28,3 +28,11 @@ Homestead.json
 .env.production
 .phpactor.json
 auth.json
+/.idea/blade.xml
+/.idea/laravel-idea.xml
+/.idea/laravel-idea-personal.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/php.xml
+/.idea/smslink-laravel.iml
+/.idea/vcs.xml
