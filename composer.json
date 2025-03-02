@@ -1,0 +1,35 @@
+{
+    "name": "liviu-hariton/smslink-laravel",
+    "description": "A Laravel package that provides convenient access to the SMSlink.ro API",
+    "keywords": ["sms", "smslink", "smslink-laravel", "smslink-api", "laravel"],
+    "authors": [
+        {
+            "name": "Liviu Hariton",
+            "email": "liviu.hariton@gmail.com",
+            "homepage": "https://eu.liviuhariton.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/liviu-hariton/smslink-laravel",
+        "issues": "https://github.com/liviu-hariton/smslink-laravel/issues"
+    },
+    "type": "library",
+    "require": {
+        "php": ">=8.3",
+        "laravel/framework": "^11.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "LHDev\\Smslink\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LHDev\\Smslink\\SmslinkServiceProvider"
+            ]
+        }
+    }
+}
